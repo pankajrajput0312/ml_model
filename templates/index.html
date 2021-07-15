@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GetMentore</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
     <style>
@@ -28,8 +28,8 @@
         }
 
         #headline {
-            color: aqua;
-            font-size: 80px;
+
+            font-size: 60px;
             font-weight: bold;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
@@ -41,6 +41,20 @@
         #ans {
             color: aliceblue;
             text-align: center;
+        }
+
+        .iris {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+
+        }
+
+        img {
+            height: 200px;
+            width: 60%;
+            margin: 50px;
         }
     </style>
 </head>
@@ -59,6 +73,9 @@
     {% if your_class %}
     <h1 id="ans"> flower class is : {{your_class}}</h1>
     {% endif %}
+    <div class='iris'>
+        <img src="{{ url_for('static', filename='iris.png') }}">
+    </div>
 </body>
 
 </html>
